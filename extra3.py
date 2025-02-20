@@ -156,25 +156,6 @@ print('O valor a ser pago é R${:.2f}.\n'.format(valor))
 # Para variação entre 2% e -10%: planejamento de políticas de incentivo às vendas.
 # Para bonificações abaixo de -10%: corte de gastos.
 
-def requesitar_lista(mensagem, comprimento):
-    '''Requesita um input com a mensagem '[mensagem],  separados por vírgula:' e retorna uma lista com o comprimento pedido.
-    
-    Repete o input caso o usuário não tenha passado a quantidade certa de dados.'''
-
-    lista = []
-    while len(lista) != comprimento:
-        lista = input('{}, separados por vírgula: '.format(mensagem)).split(',')
-    
-    return lista
-
-def formatar_lista(lista):
-    '''Converte todos os items de uma lista em float.'''
-    i = 0
-    while i < len(lista):
-        lista[i] = float(lista[i])
-        i+=1
-    return lista
-
 vendas = requesitar_lista('Digite as quantidades de vendas para 2022 e 2023', 2)
 vendas = formatar_lista(vendas)
 
